@@ -1,18 +1,37 @@
-$bp-tablet: 768px;
-$bp-tablet-horizontal: 1024px;
-$bp-desktop: 1200px;
-$bp-desktopxl: 1440px;
+
+// COLORES 
+
+$color-bg: #000000;            
+$color-primary: #db2a6b;       
+$color-primary-dark: #b8205a;  
+$color-text: #ffffff;          
+$color-text-muted: #808080;    
 
 
-$tablet: $bp-tablet;
-$tablethorizontal: $bp-tablet-horizontal;
-$desktop: $bp-desktop; 
-$desktopxl: $bp-desktopxl;
+// TIPOGRAFÍA
+
+$font-heading: "Merriweather", serif;
+$font-body: "Poppins", sans-serif;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
 
 
+// LAYOUT
 
+$container-max: 1240px;      
+$container-padding: 1.5rem;  
 
+// BORDES
 
+$radius-btn: 10px;
 
+// BREAKPOINTS 
 
-$roboto-font: 'Roboto', sans-serif; 
+$breakpoints: (
+  tablet: 768px,
+  laptop: 1024px,
+  desktop: 1280px,
+);

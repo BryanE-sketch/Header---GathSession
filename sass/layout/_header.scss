@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+
+.header {
+  @extend %container;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(16px);
+  padding-block: rem(24px);
+
+  @include respond(laptop) {
+    padding-block: rem(40px);
+  }
+
+  &__logo {
+    @extend %link-reset;
+    flex-shrink: 0;
+
+    img {
+      width: rem(160px);
+
+      @include respond(laptop) {
+        width: rem(200px);
+      }
+    }
+  }
+}

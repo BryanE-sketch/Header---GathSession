@@ -3,81 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Header - Gathsession</title>
-
+    <meta name="description" content="GathSession: meet and communicate with the best people to run projects and events." />
+    <title>GathSession | Build your best community</title>
   </head>
-  <body>
 
+  <body>
     <div class="page">
 
-      <header>
-        <figure>
-          <img src="img/GathSession.png" alt="Gathsession Logo" srcset="img/GathSession@2x.png 2x"/>
-          <figcaption>Gathsession</figcaption>
-        </figure>
 
-        <ul class="navegation">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">About Us</a></li>
-        </ul>
+      <header class="header">
+        <a href="#" class="header__logo">
+          <img src="img/GathSession.png" alt="GathSession" width="224" height="30" />
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav__list">
+            <li><a href="#" class="nav__link nav__link--active" aria-current="page">Home</a></li>
+            <li><a href="#" class="nav__link">Features</a></li>
+            <li><a href="#" class="nav__link">Blog</a></li>
+            <li><a href="#" class="nav__link">Contact</a></li>
+            <li><a href="#" class="nav__link">About Us</a></li>
+          </ul>
+        </nav>
       </header>
 
-
-        <section class="hero">
-          <div class="hero__content">
-            <h1>Build your best community starting from here.</h1>
-            <p>Meet and communicate with the best people to run projects, 
-              events or other activities in a more effective and fun way</p>
-          </div>
-
-          <div class="hero__actions">
-            <a href="#" class="btn-Get__Started">Get Started</a>
-            <a href="#" class="hero__Learn">Learn More</a>
-            <img src="img/arrow.png" alt="Arrow icon" class="hero__Arrow">
-
-          </div>
-        </section>
-
-        <section class="categories">
-
-          <article>
-            <img src="img/icon-1.png" alt="">
-            <div class="categories__text">
-              <h3>Build  comunity</h3>
-            </div>
-          </article>
-
-          <article>
-            <img src="img/icon-2.png" alt="">
-            <div class="categories__text">
-              <h3>Share Events</h3>
-            </div>
-          </article>
-
-          <article>
-            <img src="img/icon-3.png" alt="">
-            <div class="categories__text">
-              <h3>Get information</h3>
-            </div>
-          </article>
-        </section>
-
-
-        <section class="picture">
+      <main>
         
-          <article>
-            <img src="img/Picture-profile.png" alt="">
-            <div class="profile__5"></div>
-          </article>
+        <section class="hero">
+
+
+          <div class="hero__content">
+            <h1 class="hero__title">Build your best community starting from here.</h1>
+            <p class="hero__text">
+              Meet and communicate with the best people to run projects,
+              events or other activities in a more effective and fun way
+            </p>
+
+            <div class="hero__actions">
+              <a href="#" class="btn btn--primary">Get Started</a>
+              <a href="#" class="hero__link">
+                Learn More
+                <img src="img/arrow.png" alt="" class="hero__arrow" width="40" height="40" />
+              </a>
+            </div>
+
+            <ul class="categories">
+              <li class="categories__item">
+                <img src="img/icon-1.png" alt="" width="64" height="64" />
+                <p class="categories__title">Build community</p>
+              </li>
+              <li class="categories__item">
+                <img src="img/icon-2.png" alt="" width="64" height="64" />
+                <p class="categories__title">Share Events</p>
+              </li>
+              <li class="categories__item">
+                <img src="img/icon-3.png" alt="" width="64" height="64" />
+                <p class="categories__title">Get information</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero__media">
+            <img
+              src="img/Picture-profile.png"
+              alt="Portraits of smiling community members"
+              class="hero__img"
+              width="949"
+              height="906"
+            />
+          </div>
 
         </section>
+      </main>
 
     </div>
 
-    <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

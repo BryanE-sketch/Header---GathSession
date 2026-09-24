@@ -1,0 +1,60 @@
+@use "../abstracts" as *;
+
+
+.nav {
+  width: 100%;
+  overflow-x: auto;
+
+  @include respond(laptop) {
+    width: auto;
+    overflow-x: visible;
+  }
+
+  &__list {
+    @extend %list-reset;
+    display: flex;
+    align-items: center;
+    gap: rem(16px);
+
+    @include respond(tablet) {
+      gap: rem(32px);
+    }
+
+    @include respond(laptop) {
+      gap: rem(64px);
+    }
+  }
+
+  &__link {
+    @extend %link-reset;
+    position: relative;
+    display: block;
+    padding-block: rem(8px) rem(12px);
+    font-size: rem(14px);
+    font-weight: $fw-medium;
+    white-space: nowrap;
+
+    @include respond(laptop) {
+      font-size: rem(16px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: rem(32px);
+      height: rem(4px);
+      border-radius: rem(2px);
+      background-color: $color-primary;
+      opacity: 0;
+      transform: translateX(-50%);
+      transition: opacity 0.2s ease;
+    }
+
+    &:hover::after,
+    &--active::after {
+      opacity: 1;
+    }
+  }
+}

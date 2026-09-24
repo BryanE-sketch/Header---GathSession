@@ -1,36 +1,13 @@
-@use "./variables" as *;
+@use "sass:map";
+@use "variables" as *;
 
 
-@mixin breakpoint($bp) {
-
-
-   
-  @if $bp == tablet {
-    @media (min-width: $bp-tablet) {
-      @content;
-    }
+@mixin respond($breakpoint) {
+  @if not map.has-key($breakpoints, $breakpoint) {
+    @error "El breakpoint `#{$breakpoint}` no existe. Opciones: #{map.keys($breakpoints)}";
   }
-    @if $bp == tablethorizontal {
-       @media (min-width: $bp-tablet-horizontal) {
-      @content;
 
-    }
-
-
-  }
-  @if $bp == desktop {
-       @media (min-width: $bp-desktop) {
-      @content;
-       
-      
-    }   
-  }
-  
-  @if $bp == desktopxl {
-       @media (min-width: $bp-desktopxl) {
-      @content;
-
-       
-    }
+  @media (min-width: map.get($breakpoints, $breakpoint)) {
+    @content;
   }
 }
